@@ -9,22 +9,33 @@ import './App.css';
    
    import Form from './components/render';
    import ComponentA from './components/componentA';
-import UserContext from './components/context';
+/* import UserContext from './components/context'; */
 import HOC from './components/hocamain';
 import Display from './components/usehocmain';
   import Show from './components/parhoc';  
   import Hoocuntthree from './components/hooks';
   import Addfruit from './components/addfruit';
+   import UseContext from './components/useContext';
+import React from 'react';
+import Usethere from './components/usecontextcenter';
+  
+
+   export const UserContext = React.createContext(); 
+    /*  const User = {
+    name : "shivaraj",
+    age : 21,
+    aim : "to get better"
+  } */
  
-function App() {
-  /* const data = "hello from api";
-  const data1 = "this only for second compoent"
-  const dataA = "this only for third compoent" */
+   function App() { 
   
   return (
     <div className="App">
+       < UserContext.Provider value={["shivaraj","everybofy"]} >
+        <Usethere></Usethere>
+       </UserContext.Provider>
 
-        <Addfruit></Addfruit>
+       
      
 
      
@@ -34,7 +45,7 @@ function App() {
      
      
      
-     
+         {/* <Addfruit></Addfruit> */}
       {/* <UserContext.Provider value ={ {data,data1,dataA}}>
 
         <ComponentA></ComponentA>
@@ -49,3 +60,4 @@ function App() {
 }
 
 export default App;
+
