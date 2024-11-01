@@ -2,11 +2,11 @@
 
   import React, { useContext } from "react";
 import UseContext from "./useContext";
-import {UserContext} from "../App";
+/* import {UserContext} from "../App" */
 
     function Usethere () {
-      const [name,] = useContext(UserContext)
-
+      /* const [name,] = useContext(UserContext)
+ */
 
         return ( 
             <>
